@@ -50,6 +50,7 @@ for _ in range(t):
         for t2 in range(p, p + q):
             # t = t1 mod x
             # t = t2 mod y
+            # crt([t1,t2],[x,y])
             t, lcm = crt([t1, t2], [2 * x + 2 * y, p + q])
             if lcm == 0:
                 continue

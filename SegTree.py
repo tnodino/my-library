@@ -16,7 +16,7 @@ class SegTree:
 
     def update(self,k,x):
         k += self.num - 1
-        self.seg[k] ^= x
+        self.seg[k] = self.segfunc(self.seg[k],x)
         while k:
             k = (k-1) // 2
             self.seg[k] = self.segfunc(self.seg[k*2+1],self.seg[k*2+2])
