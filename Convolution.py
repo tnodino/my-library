@@ -6,7 +6,7 @@ def convolution(f,g):
     g = np.fft.rfft(g,size)
     f *= g
     f = np.fft.irfft(f,size)
-    return np.rint(f).astype(np.int32)
+    return np.rint(f).astype(np.int64)
 
 s = input()
 t = input()
